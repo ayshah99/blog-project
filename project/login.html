@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Log in</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/loginstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    </head>
+    <body style="background-image: url('./img/background2.jpg'); background-repeat: no-repeat; background-color: azure;">
+
+		<div class = "Form">
+			<p class="head">Log in</p>
+            <p class="head2">Welcome back !</p>
+            <form class="login">
+                <input type = "text" name = "Username" placeholder="Username" class="input">
+					<br> 
+					<br>
+				<input type = "password" name = "Password" placeholder="Password" class="input"> 
+					<br>
+					<br>
+                <button type="button" class="button"  onclick="check(this.form)">Login</button>
+					<br>
+				
+            </form>
+        </div>
+
+        <script>
+            function check(form)
+            {
+             if(form.Username.value == "ayshah" && form.Password.value == "123456")
+              {
+                localStorage.setItem("admin", "1");  
+                window.location='blog.html';
+              }
+             else
+             {
+               alert("Wrong Username or Password");
+              }
+            }
+        </script>
+
+        <script src="bootstrap/js/jquery-3.5.1.slim.min.js"  ></script>
+        <script src="bootstrap/js/bootstrap.bundle.min.js"  ></script>
+
+	</body>
+</html>

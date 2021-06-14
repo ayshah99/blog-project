@@ -1,0 +1,70 @@
+    .Form
+			{
+				position: inherit;
+				margin-bottom: 20px ;
+			}
+			
+	.login
+			{
+				font-family: 'Montserrat', sans-serif;
+				position: absolute;
+				top: 340px;
+				left: 800px;
+				z-index: 2;
+			}
+			
+	.input
+			{
+				width: 200%;
+				height: 26px;
+				font-size: 13px;
+			}
+
+	.head
+			{
+				position: absolute;
+				top: 130px;
+				left: 850px;
+				font-size: 60pt;
+				font-family: 'Montserrat', sans-serif;
+				color: #be961b;
+				z-index: 2;
+				object-position: center;
+			}
+	.head2
+			{
+				position: absolute;
+				top: 250px;
+				left: 860px;
+				font-size: 20pt;
+				font-family: 'Montserrat', sans-serif;
+				color: #524314d8;
+				z-index: 2;
+				object-position: center;
+			}
+			
+    .button 
+			{
+				width: 200%;
+				margin: 15px 0;
+				padding: 3px;
+				background: none;
+				color: #be961b;
+				cursor: pointer;
+				border: 3px solid #be961b ;
+				font-size: 25px;
+				font-family: 'Montserrat', sans-serif;
+			}
+	.button2 
+			{
+				width: 15%;
+				margin: 15px 0;
+				padding: 3px;
+				background: none;
+				color: #be961b;
+				cursor: pointer;
+				border: 3px solid #be961b ;
+				font-size: 25px;
+				font-family: 'Montserrat', sans-serif;
+			}
+			

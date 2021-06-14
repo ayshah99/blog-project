@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SDA Blog / Log in</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/loginstyle.css">
+    <script>
+    if (localStorage.getItem("admin")!='1' ) 
+    {
+        window.location='login.html';
+    }
+    </script>
+    </head>
+
+    <body style = "background-color: azure;">
+        <div class="container">
+            <button onClick="document.location='add.html'" type="button" class="button2" style="margin-top:20px">Add Blog</button>
+            <div class="row" id="result">
+            <div  class="col-lg-12 pt-5">
+            <div class="card">
+            <div class="card-body">
+            <p class="card-text" style="text-align:center">No Record Found</p>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script>
+        if(localStorage.getItem('data')!=null)
+        {
+            var items =  JSON.parse(localStorage.getItem('data'));
+            var i;
+            var html = "";
+            for(i=0;i<items.length; i++)
+            {
+            html+='<div  class="col-lg-4 pt-5">';
+            html+='<div class="card">';
+            html+='  <div class="card-body">';
+            html+='<h5 class="card-title">'+items[i]['title']+'</h5>';
+            html+='    <p class="card-text">'+items[i]['details']+'</p>';
+            html+='  </div>';
+            html+='</div>';
+            html+='</div>';         
+            }
+            document.getElementById("result").innerHTML = html;
+        }
+        </script>
+        <script src="bootstrap/js/jquery-3.5.1.slim.min.js"  ></script>
+        <script src="bootstrap/js/bootstrap.bundle.min.js"  ></script>
+    </body>
+</html>
